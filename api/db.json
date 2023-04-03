@@ -1,0 +1,39 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Márcio Diego Lima",
+      "telefone": "92997779836",
+      "datanasc": "29/03/1998",
+      "avatar": "https://avatars.githubusercontent.com/u/1?v=4"
+    },
+    {
+      "id": 2,
+      "nome": "Joaquim Tiago Jesus",
+      "telefone": "82999072480",
+      "datanasc": "10/03/1965",
+      "avatar": "https://avatars.githubusercontent.com/u/2?v=4"
+    },
+    {
+      "id": 3,
+      "nome": "Antonio César Manoel Peixoto",
+      "telefone": "18989784874",
+      "datanasc": "04/02/1998",
+      "avatar": "https://avatars.githubusercontent.com/u/3?v=4"
+    },
+    {
+      "id": 4,
+      "nome": "Nathan Antonio Pires",
+      "telefone": "47996075531",
+      "datanasc": "01/03/2004",
+      "avatar": "https://avatars.githubusercontent.com/u/4?v=4"
+    },
+    {
+      "id": 5,
+      "nome": "Hugo Bryan Lopes",
+      "telefone": "83981406481",
+      "datanasc": "15/01/2000",
+      "avatar": "https://avatars.githubusercontent.com/u/6?v=4"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Projeto 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Projeto 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+
+    <h1>Usuários</h1>
+    <table border="1" style="width: 100%">
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Data de Nascimento</th>
+        <th>Avatar</th>
+        <th>Ação</th>
+      </tr>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.nome }}</td>
+        <td>{{ usuario.telefone }}</td>
+        <td>{{ usuario.datanasc }}</td>
+        <td>
+          <ion-avatar class="avatar">
+            <img src="{{ usuario.avatar }}" />
+          </ion-avatar>
+        </td>
+        <td><ion-button (click)="onClickAtualizar()" color="warning">Editar</ion-button> | <ion-button (click)="onClickDelete()"
+            color="danger">Remover</ion-button></td>
+      </tr>
+    </table>
+
+    <h3>Novo Usuário</h3>
+    <div class="form-group">
+      <form method="post" #frm="ngForm">
+        <ion-item lines="full">
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" class="form-control" [(ngModel)]="usuario.nome" name="nome" requerid></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Telefone</ion-label>
+          <ion-input type="number" class="form-control" [(ngModel)]="usuario.telefone" name="user.telefone"
+            requerid></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Data de Nascimento</ion-label>
+          <ion-input type="text" class="form-control" [(ngModel)]="usuario.datanasc" name="user.datanasc"
+            requerid></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-button (click)="onClickPost()" size="small">Salvar</ion-button>
+        </ion-item>
+      </form>
+    </div>
+    <!-- <ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-input label="Text input" placeholder="Nome"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Telephone input" type="tel" placeholder="(00) 00000-0000"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Text input" placeholder="Data de Nascimento"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+    <ion-button (click)="onClickPost" size="small">Salvar</ion-button> -->
+
+  </div>
+</ion-content>
